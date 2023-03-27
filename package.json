@@ -1,0 +1,42 @@
+{
+  "name": "tamagui-monorepo",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "native": "yarn build && cd apps/expo && yarn start",
+    "web": "yarn build && cd apps/next && yarn next",
+    "web:prod": "yarn workspace next-app build",
+    "watch": "yarn turbo run watch --filter=tamagui-extras",
+    "postinstall": "yarn build",
+    "build": "yarn workspaces foreach --exclude next-app -pi run build",
+    "upgrade:tamagui": "manypkg upgrade tamagui && manypkg upgrade @tamagui && manypkg upgrade tamagui-loader && manypkg upgrade react-native-web-lite",
+    "upgrade:next": "manypkg upgrade next && manypkg upgrade eslint-config-next"
+  },
+  "resolutions": {
+    "esbuild": "0.15.6",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-refresh": "^0.14.0",
+    "typescript": "^4.9.5",
+    "react-native-web": "0.18.12",
+    "webpack": "^5.74.0",
+    "@tamagui/core": "1.9.10",
+    "@tamagui/web": "1.9.10",
+    "tamagui": "1.9.10"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.21.0"
+  },
+  "devDependencies": {
+    "@manypkg/cli": "^0.20.0",
+    "@types/react": "^18.0.29",
+    "eslint": "^8.36.0",
+    "prettier": "^2.8.7",
+    "turbo": "^1.8.5",
+    "typescript": "^4.9.5"
+  },
+  "packageManager": "yarn@3.2.3"
+}

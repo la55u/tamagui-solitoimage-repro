@@ -1,0 +1,27 @@
+{
+  "version": "0.0.0",
+  "name": "app",
+  "main": "index.ts",
+  "scripts": {
+    "check-types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@react-navigation/bottom-tabs": "^6.5.7",
+    "@react-navigation/native": "^6.1.6",
+    "@react-navigation/native-stack": "^6.9.12",
+    "@tamagui/animations-react-native": "1.9.10",
+    "@tamagui/colors": "1.9.10",
+    "@tamagui/font-inter": "1.9.10",
+    "@tamagui/shorthands": "1.9.10",
+    "expo-linking": "^4.0.1",
+    "expo-localization": "~14.1.1",
+    "i18next": "^22.4.13",
+    "react-i18next": "^12.2.0",
+    "solito": "^3.0.0",
+    "tamagui-extras": "*",
+    "zustand": "^4.3.6"
+  },
+  "sideEffects": [
+    "*.css"
+  ]
+}
